@@ -126,6 +126,60 @@
       </button>
     </form>
   </section>
+  <script>
+    function Hienthi() {
+      const form = document.getElementById("bookingForm");
+      if (form) {
+        form.style.display = form.style.display === "none" ? "block" : "none";
+      }
+    }
+
+    function xulyform(event) {
+      event.preventDefault();
+
+      const data = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        location: document.getElementById("location").value,
+        guests: document.getElementById("guests").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        note: document.getElementById("note").value,
+      };
+
+      alert("Cảm ơn bạn! Thông tin đã được ghi nhận.");
+
+      event.target.reset();
+      event.target.style.display = "none";
+    }
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      reset: true,
+      delay: 300,
+      distance: "60px",
+      duration: 1500,
+    });
+
+    ScrollReveal().reveal(".section-title", {
+      delay: 555,
+      duration: 2500,
+      origin: "top",
+    });
+
+    ScrollReveal().reveal(".section-services__card", {
+      delay: 200,
+      interval: 200,
+      origin: "bottom",
+    });
+
+    ScrollReveal().reveal(".section-contact__info-item", {
+      delay: 1200,
+      interval: 300,
+    });
+  </script>
 
 </body>
 </html>
